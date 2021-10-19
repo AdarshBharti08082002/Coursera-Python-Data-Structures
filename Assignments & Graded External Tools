@@ -5,16 +5,13 @@ NOTE: PRACTISE QUIZZES ARE NOT INCLUDED!
 
 Python-Data-Structures Chapter 6 Quiz Answers
 
-Q. What does the following Python Program print out? str1 = "Hello"; str2 = 'there'; bob = str1 +
-str2; print bob
+Q. What does the following Python Program print out? str1 = "Hello"; str2 = 'there'; bob = str1 + str2; print bob
 Ans: Hellothere
 Q.What does the following Python program print out? x = '40'; y = int(x) + 2; print y
 A. 42
-Q. How would you use the index operator [] to print out the letter q from the following string? x =
-'From marquard@uct.ac.za'
+Q. How would you use the index operator [] to print out the letter q from the following string? x ='From marquard@uct.ac.za'
 A. print x[8]
-Q. How would you use string slicing [:] to print out 'uct' from the following string? x = 'From
-marquard@uct.ac.za'
+Q. How would you use string slicing [:] to print out 'uct' from the following string? x = 'From marquard@uct.ac.za'
 A. print x[14:17]
 Q. What is the iteration variable in the following Python code? for letter in 'banana' : print letter
 A. letter
@@ -24,8 +21,7 @@ Q. How would you print out the following variable in all uppercase in Python? gr
 A. print greet.upper()
 Q. Which of the following is not a valid string method in Python?
 A. twist()
-Q. What will the following Python code print out? data = 'From stephen.marquard@uct.ac.za Sat
-Jan 5 09:14:16 2008'; pos = data.find('.'); print data[pos:pos+3]
+Q. What will the following Python code print out? data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'; pos = data.find('.'); print data[pos:pos+3]
 A. .ma
 Q. Which of the following string methods removes whitespace from both the beginning and end
 of a string?
@@ -33,7 +29,7 @@ A. strip()
 
 Assignment 6.5
 
-text = "X-DSPAM-Confidence: 0.8475";
+text = "X-DSPAM-Confidence:    0.8475";
 pos=text.find(':')
 value=text[pos+1:]
 print(float(value))
@@ -46,51 +42,44 @@ Q. What is stored in a "file handle" that is returned from a successful open() c
 A. The handle is a connection to the file's data
 Q. What do we use the second parameter of the open() call to indicate?
 A. Whether we want to read data from the file or write data to the file
-Q. What Python function would you use if you wanted to prompt the user for a file name to
-open?
+Q. What Python function would you use if you wanted to prompt the user for a file name to open?
 A. input()
 Q. What is the purpose of the newline character in text files?
 A. It indicates the end of one line of text and the beginning of another line of text
-Q. If we open a file as follows: xfile = open('mbox.txt'). What statement would we use to read the
-file one line at a time?
+Q. If we open a file as follows: xfile = open('mbox.txt'). What statement would we use to read the file one line at a time?
 A. for line in xfile:
-Q. What is the purpose of the following Python code? fhand = open('mbox.txt'); x = 0; for line in
-fhand: x = x + 1; print x
+Q. What is the purpose of the following Python code? fhand = open('mbox.txt'); x = 0; for line in fhand: x = x + 1; print x
 A. Count the lines in the file 'mbox.txt'
-Q. If you write a Python program to read a text file and you see extra blank lines in the output
-that are not present in the file input as shown below, what Python string function will likely solve
-the problem?. From: stephen.marquard@uct.ac.za; From: louis@media.berkeley.edu; From:
-zqian@umich.edu; From: rjlowe@iupui.edu ...
+Q. If you write a Python program to read a text file and you see extra blank lines in the output that are not present in the file input as shown below, what Python string function will likely solve the problem?. From: stephen.marquard@uct.ac.za; From: louis@media.berkeley.edu; From:zqian@umich.edu; From: rjlowe@iupui.edu ...
 A. strip()
-Q. The following code sequence fails with a traceback when the user enters a file that does not
-exist. How would you avoid the traceback and make it so you could print out your own error
-message when a bad file name was entered? fname = raw_input('Enter the file name: '); fhand =
-open(fname)
+Q. The following code sequence fails with a traceback when the user enters a file that does not exist. How would you avoid the traceback and make it so you could print out your own error message when a bad file name was entered? fname = raw_input('Enter the file name: '); fhand =open(fname)
 A. try / except
 Q. What does the following Python code do? fhand = open('mbox-short.txt'); inp = fhand.read()
 A. Reads the entire file into the variable inp as a string
 
 Assignment 7.1
 
+# Use words.txt as the file name
 fname = input("Enter file name: ")
 fh = open(fname)
 for line in fh.readlines():
-print(line.upper().strip())
+    print(line.upper().strip())
 
 Assignment 7.2
 
+# Use the file name mbox-short.txt as the file name
 total=0
 count=0
 fname = input("Enter file name: ")
 fh = open(fname)
 for line in fh:
-if not line.startswith("X-DSPAM-Confidence:") :
-continue
-count=count+1
-pos=line.find(':')
-value=line[pos+1:]
-total=total+float(value)
-avg=total/count
+    if not line.startswith("X-DSPAM-Confidence:") : 
+    	continue
+    count=count+1
+    pos=line.find(':')
+    value=line[pos+1:]
+    total=total+float(value)
+    avg=total/count
 print("Average spam confidence:",avg)
 
 Python-Data-Structures Chapter 8 Quiz Answers
@@ -103,20 +92,17 @@ Q. For the following list, how would you print out 'Sally'? friends = [ 'Joseph'
 A. print friends[2]
 Q. fruit = 'Banana' fruit[0] = 'b'; print fruit
 A. Nothing would print the program fails with a traceback
-Q. Which of the following Python statements would print out the length of a list stored in the
-variable data?
+Q. Which of the following Python statements would print out the length of a list stored in the variable data?
 A. print len(data)
 Q. What type of data is produced when you call the range() function? x = range(5)
 A. A list of integers
-Q. What does the following Python code print out? a = [1, 2, 3]; b = [4, 5, 6]; c = a + b; print
-len(c)
+Q. What does the following Python code print out? a = [1, 2, 3]; b = [4, 5, 6]; c = a + b; print len(c)
 A. 6
 Q. Which of the following slicing operations will produce the list [12, 3]? t = [9, 41, 12, 3, 74, 15]
 A. t[2:4]
 Q. What list method adds a new item to the end of an existing list?
 A. append()
-Q. What will the following Python code print out? friends = [ 'Joseph', 'Glenn', 'Sally' ];
-friends.sort(); print friends[0]
+Q. What will the following Python code print out? friends = [ 'Joseph', 'Glenn', 'Sally' ]; friends.sort(); print friends[0]
 A. Glenn
 
 Assignment 8.4
@@ -125,9 +111,9 @@ fname = input("Enter file name: ")
 fh = open(fname)
 lst = list()
 for line in fh:
-for i in line.split():
-if not i in lst:
-lst.append(i)
+    for i in line.split():
+        if not i in lst:
+            lst.append(i)
 lst.sort()
 print(lst)
 
@@ -138,19 +124,18 @@ if len(fname) < 1 : fname = "mbox-short.txt"
 fhand = open(fname)
 count = 0
 for line in fhand:
-line.rstrip()
-if line.startswith("From "):
-words = line.split()
-print(words[1])
-count += 1
+    line.rstrip()
+    if line.startswith("From "):
+        words = line.split()
+        print(words[1])
+        count += 1
 print("There were",count, "lines in the file with From as the first word")
 
 Python-Data-Structures Chapter 9 Quiz Answers
 
 Q. How are Python dictionaries different from Python lists?
 A. Python lists maintain order and dictionaries do not maintain order
-Q. What is a term commonly used to describe the Python dictionary feature in other
-programming languages?
+Q. What is a term commonly used to describe the Python dictionary feature in other programming languages?
 A. Associative arrays
 Q. What would the following Python code print out? stuff = dict(); print stuff['candy']
 A. The program would fail with a traceback
@@ -160,9 +145,7 @@ Q. (T/F) When you add items to a dictionary they remain in the order in which yo
 A. False
 Q. What is a common use of Python dictionaries in a program?
 A. Building a histogram counting the occurrences of various strings in a file
-Q. Which of the following lines of Python is equivalent to the following sequence of statements
-assuming that counts is a dictionary? if key in counts: counts[key] = counts[key] + 1 else:
-counts[key] = 1
+Q. Which of the following lines of Python is equivalent to the following sequence of statements assuming that counts is a dictionary? if key in counts: counts[key] = counts[key] + 1 else: counts[key] = 1
 A. counts[key] = counts.get(key,0) + 1
 Q. In the following Python, what does the for loop iterate through? x = dict() ... for y in x : ...
 A. It loops through the keys in the dictionary
@@ -176,18 +159,20 @@ Assignment 9.4
 name = input("Enter file:")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
+
 count = dict()
 for line in handle:
-if not line.startswith("From "):continue
-line = line.split()
-line = line[1]
-count[line] = count.get(line, 0) +1
+    if not line.startswith("From "):continue
+    line = line.split()
+    line = line[1]
+    count[line] = count.get(line, 0) +1
+
 bigcount = None
 bigword = None
 for k,v in count.items():
-if bigcount == None or v > bigcount:
-bigword = k
-bigcount = v
+    if bigcount == None or v > bigcount:
+        bigword = k
+        bigcount = v 
 print(bigword, bigcount)
 
 Python-Data-Structures Chapter 10 Quiz Answers
@@ -198,25 +183,19 @@ Q. Which of the following methods work both in Python lists and Python tuples?
 A. index()
 Q. What will end up in the variable y after this code is executed? x , y = 3, 4
 A. 4
-Q. In the following Python code, what will end up in the variable y? x = { 'chuck' : 1 , 'fred' : 42,
-'jan': 100}; y = x.items()
+Q. In the following Python code, what will end up in the variable y? x = { 'chuck' : 1 , 'fred' : 42,'jan': 100}; y = x.items()
 A. A list of tuples
-Q. Which of the following tuples is greater than x in the following Python sequence? x = (5, 1, 3);
-if ??? > x : ...
+Q. Which of the following tuples is greater than x in the following Python sequence? x = (5, 1, 3); if ??? > x : ...
 A. (6, 0, 0)
-Q. What does the following Python code accomplish, assuming the c is a non-empty dictionary?
-tmp = list(); for k, v in c.items(): tmp.append( (v, k))
+Q. What does the following Python code accomplish, assuming the c is a non-empty dictionary? tmp = list(); for k, v in c.items(): tmp.append( (v, k))
 A. It creates a list of tuples where each tuple is a value, key pair
 Q. If the variable data is a Python list, how do we sort it in reverse order?
 A. data.sort(reverse=True)
-Q. Using the following tuple, how would you print 'Wed'? days = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri',
-'Sat', 'Sun')
+Q. Using the following tuple, how would you print 'Wed'? days = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat', 'Sun')
 A. print(days[2])
-Q. In the following Python loop, why are there two iteration variables (k and v)? c = {'a':10, 'b':1,
-'c':22}; for k, v in c.items() : ...
+Q. In the following Python loop, why are there two iteration variables (k and v)? c = {'a':10, 'b':1,'c':22}; for k, v in c.items() : ...
 A. Because the items() method in dictionaries returns a list of tuples
-Q. Given that Python lists and Python tuples are quite similar - when might you prefer to use a
-tuple over a list?
+Q. Given that Python lists and Python tuples are quite similar - when might you prefer to use a tuple over a list?
 A. For a temporary variable that you will use and discard without modifying
 
 Assignment 10.2
@@ -227,15 +206,15 @@ handle = open(name)
 lst=list()
 di=dict()
 for line in handle:
-if line.startswith("From "):
-pos=line.find(":")
-lst.append(line[pos-2:pos])
+    if line.startswith("From "):
+    	pos=line.find(":")
+    	lst.append(line[pos-2:pos])
 for word in lst:
-di[word]=di.get(word,0)+1
+    di[word]=di.get(word,0)+1
 newlst=list()
 for key,val in di.items():
-newtup=(key,val)
-newlst.append(newtup)
+    newtup=(key,val)
+    newlst.append(newtup)
 newlst=sorted(newlst)
 for key,val in newlst:
-print(key,val)
+    print(key,val)
